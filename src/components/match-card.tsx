@@ -14,7 +14,7 @@ function initials(name: string) {
 
 export function MatchCard({ match }: MatchCardProps) {
   return (
-    <article className="rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
+    <article className="flex h-full flex-col rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
       <div className="flex items-center justify-between gap-4 text-xs font-bold text-[#63756d]">
         <span className="rounded-full bg-[#159655] px-2 py-1 text-[10px] font-black text-white">ATP</span>
         <span>
@@ -49,7 +49,7 @@ export function MatchCard({ match }: MatchCardProps) {
           <p className="text-sm font-black leading-tight">{match.playerB}</p>
         </div>
       </div>
-      <p className="mt-5 text-sm leading-5 text-[#52645c]">
+      <p className="mt-5 flex-1 text-sm leading-5 text-[#52645c]">
         <span className="font-black text-[#10241d]">Why watch: </span>
         {match.reasonToWatch}
       </p>
