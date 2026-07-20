@@ -7,6 +7,16 @@ export type ArticleCategory =
   | "Gear"
   | "Beginner";
 
+export const articleCategories: ArticleCategory[] = [
+  "ATP",
+  "WTA",
+  "Grand Slam",
+  "Match Preview",
+  "Match Review",
+  "Gear",
+  "Beginner"
+];
+
 export type ArticleSource = {
   label: string;
   url: string;

@@ -27,9 +27,16 @@ const visualStyles: Record<Article["category"], string> = {
 };
 
 export function ArticleCard({ article, compact = false }: ArticleCardProps) {
+  const publishedDate = new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(article.publishedAt));
+
   return (
-    <article className="overflow-hidden rounded-lg border border-[#dfe6dc] bg-white shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
-      <div className={`relative h-28 bg-gradient-to-br ${visualStyles[article.category]}`}>
+    <article className="flex h-full flex-col overflow-hidden rounded-lg border border-[#dfe6dc] bg-white shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
+      <div className={`relative h-28 shrink-0 bg-linear-to-br ${visualStyles[article.category]}`}>
         <span
           className={`absolute left-3 top-3 rounded px-2 py-1 text-[10px] font-black uppercase ${categoryStyles[article.category]}`}
         >
@@ -37,18 +44,20 @@ export function ArticleCard({ article, compact = false }: ArticleCardProps) {
         </span>
         <div className="absolute bottom-3 right-3 h-8 w-8 rounded-full border-4 border-white/70 bg-[#e7ff26]" />
       </div>
-      <div className="p-4">
+      <div className="flex flex-1 flex-col p-4">
         <h3 className="text-base font-black leading-tight tracking-normal">
-          <Link href={`/news/${article.slug}`} className="hover:text-[var(--primary)]">
+          <Link href={`/news/${article.slug}`} className="hover:text-(--primary)">
             {article.title}
           </Link>
         </h3>
-        <p className="mt-2 text-sm leading-5 text-[#607068]">
+        <p className="mt-2 flex-1 text-sm leading-5 text-[#607068]">
           {compact ? article.summary.slice(0, 82) + "..." : article.summary}
         </p>
-        <time className="mt-3 block text-xs font-bold text-[#6b7a72]" dateTime={article.publishedAt}>
-          {compact ? "5 min read" : "2 min read"}
-        </time>
+        <div className="mt-4 flex items-center gap-2 text-xs font-bold text-[#6b7a72]">
+          <time dateTime={article.publishedAt}>{publishedDate}</time>
+          <span aria-hidden="true">·</span>
+          <span>{compact ? "5 min read" : "2 min read"}</span>
+        </div>
       </div>
     </article>
   );
