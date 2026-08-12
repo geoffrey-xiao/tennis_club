@@ -28,7 +28,7 @@ export function HomeHero() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/news"
+              href="/briefing"
               className="accent-link-text inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f4f100] px-6 text-sm font-black shadow-[0_12px_28px_rgba(244,241,0,0.25)]"
             >
               Read Today&apos;s Briefing
