@@ -7,7 +7,7 @@ export function BriefingSection() {
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="mb-5 flex items-center justify-between gap-4">
         <SectionHeading eyebrow="Today" title="Today's Tennis Briefing" description={todaysBriefing.summary} />
-        <Link href="/news" className="hidden text-sm font-black text-[#0b3124] sm:block">
+        <Link href="/briefing" className="hidden text-sm font-black text-[#0b3124] sm:block">
           View all ›
         </Link>
       </div>
