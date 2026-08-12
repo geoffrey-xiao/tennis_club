@@ -13,12 +13,12 @@ export function MatchesSection({ matches }: MatchesSectionProps) {
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         <div className="flex items-end justify-between gap-4">
           <SectionHeading
-            eyebrow="Watch list"
-            title="Today's Recommended Matches"
-            description="Original match recommendations ranked by watchability."
+            eyebrow="Sample watch list"
+            title="Recommended Matches"
+            description="Editorial match examples ranked by watchability. Live schedules are planned for a future release."
           />
           <Link href="/news" className="hidden text-sm font-black text-[#0b3124] sm:block">
-            View full schedule ›
+            Browse match previews ›
           </Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">

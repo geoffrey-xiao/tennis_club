@@ -9,7 +9,10 @@ export function SiteFooter() {
           <p className="mt-2 max-w-xl text-sm leading-6 text-white/75">
             Original tennis summaries, curated match notes, player context, and beginner-friendly learning.
           </p>
-          <p className="mt-6 text-xs text-white/45">Copyright 2026 Tennis Club. All rights reserved.</p>
+          <p className="mt-4 text-xs leading-5 text-white/55">
+            MVP prototype: schedules, rankings, and recent results are illustrative demo content unless linked to an official source.
+          </p>
+          <p className="mt-3 text-xs text-white/45">Copyright 2026 Tennis Club. All rights reserved.</p>
         </div>
         <div className="grid gap-2 text-sm text-white/70">
           <p className="font-black text-white">Explore</p>

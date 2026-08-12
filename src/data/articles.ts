@@ -37,8 +37,8 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    id: "article-briefing-clay-hard-court",
-    slug: "clay-to-hard-court-adjustments",
+    id: "article-tennis-scoring-101",
+    slug: "tennis-scoring-101",
     title: "Tennis Scoring 101",
     category: "Beginner",
     summary:
@@ -48,7 +48,7 @@ export const articles: Article[] = [
     sources: [{ label: "Official tennis rules reference", url: "https://www.itftennis.com/" }],
     publishedAt: "2026-06-03T08:00:00.000Z",
     author: "Tennis Club Desk",
-    tags: ["surfaces", "strategy", "beginner"]
+    tags: ["scoring", "rules", "beginner"]
   },
   {
     id: "article-match-preview-pressure",

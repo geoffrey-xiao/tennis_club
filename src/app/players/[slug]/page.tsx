@@ -22,7 +22,12 @@ export async function generateMetadata({ params }: PlayerPageProps): Promise<Met
   return {
     title: `${player.name} Profile | Tennis Club`,
     description: `${player.name}: ${player.playingStyle}, strengths, weaknesses, recent results, and updates.`,
-    alternates: { canonical: `/players/${player.slug}` }
+    alternates: { canonical: `/players/${player.slug}` },
+    openGraph: {
+      title: `${player.name} Profile | Tennis Club`,
+      description: `${player.name}: ${player.playingStyle}, strengths, weaknesses, recent results, and updates.`,
+      type: "profile"
+    }
   };
 }
 

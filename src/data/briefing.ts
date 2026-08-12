@@ -5,6 +5,7 @@ export type BriefingItem = {
 };
 
 export const todaysBriefing = {
+  publishedAt: "2026-06-03T08:00:00.000Z",
   headline: "Serve, return, and momentum",
   summary:
     "A short original briefing for fans who want the shape of the day before choosing what to watch.",

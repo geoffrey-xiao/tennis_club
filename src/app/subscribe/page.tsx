@@ -4,7 +4,7 @@ import { players } from "@/data/players";
 
 export const metadata: Metadata = {
   title: "Subscribe | Tennis Club",
-  description: "Subscribe to the daily Tennis Club briefing for match picks, player updates, and beginner guides.",
+  description: "Preview the Tennis Club newsletter signup for match picks, player updates, and beginner guides.",
   alternates: { canonical: "/subscribe" }
 };
 
@@ -15,6 +15,9 @@ export default function SubscribePage() {
         <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--primary)]">Daily briefing</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Follow tennis without the noise.</h1>
         <p className="mt-5 text-lg leading-8 text-[#52645c]">Get original summaries, the day’s best match picks, player context, and one useful learning note.</p>
+        <p className="mt-4 rounded-md border border-[#cad5cb] bg-white p-4 text-sm leading-6 text-[#52645c]">
+          MVP preview: this form validates your details but does not store them or send email yet.
+        </p>
         <ul className="mt-6 grid gap-3 font-bold text-[#35463f]"><li>✓ Concise daily context</li><li>✓ No betting content</li><li>✓ Unsubscribe whenever you like</li></ul>
       </div>
       <SubscriptionForm players={players} />

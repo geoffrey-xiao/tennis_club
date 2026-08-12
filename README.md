@@ -29,3 +29,20 @@ Launch a lightweight content website that validates whether users want to read d
 ## Important Legal Guideline
 
 Do not copy full articles, copyrighted images, or paid data. Content should be original summaries with source links. Use public data carefully and prefer official sources or licensed APIs.
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Run the production checks with `npm run lint`, `npm run typecheck`, and
+`npm run build`.
+
+Set `NEXT_PUBLIC_SITE_URL` to the deployed origin (for example,
+`https://tennis.example.com`) so canonical links, Open Graph metadata,
+`robots.txt`, and `sitemap.xml` use the production domain.
+
+The newsletter endpoint is intentionally validation-only in this MVP. It does
+not persist addresses or send email yet.

@@ -13,6 +13,12 @@ function initials(name: string) {
 }
 
 export function MatchCard({ match }: MatchCardProps) {
+  const matchDate = new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(match.startTime));
+
   return (
     <article className="flex h-full flex-col rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
       <div className="flex items-center justify-between gap-4 text-xs font-bold text-[#63756d]">
@@ -34,10 +40,11 @@ export function MatchCard({ match }: MatchCardProps) {
               hour: "numeric",
               minute: "2-digit",
               hour12: false,
-              hourCycle: "h23"
+              hourCycle: "h23",
+              timeZone: "UTC"
             }).format(new Date(match.startTime))}
           </time>
-          <p className="mt-1 text-[10px] font-bold uppercase text-[#6b7a72]">Today</p>
+          <p className="mt-1 text-[10px] font-bold uppercase text-[#6b7a72]">{matchDate} UTC</p>
           <span className="mt-3 inline-grid h-8 w-8 place-items-center rounded-full bg-[#edf2ec] text-xs font-black">
             vs
           </span>
