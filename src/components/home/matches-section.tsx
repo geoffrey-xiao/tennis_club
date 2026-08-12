@@ -15,7 +15,7 @@ export function MatchesSection({ matches }: MatchesSectionProps) {
           <SectionHeading
             eyebrow="Watch list"
             title="Today's Recommended Matches"
-            description="Original, placeholder match recommendations ranked by watchability."
+            description="Original match recommendations ranked by watchability."
           />
           <Link href="/news" className="hidden text-sm font-black text-[#0b3124] sm:block">
             View full schedule ›
