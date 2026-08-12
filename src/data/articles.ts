@@ -59,7 +59,7 @@ export const articles: Article[] = [
       "Three pressure patterns to watch when two aggressive baseliners meet deep in a draw.",
     body:
       "The first serve after a long rally, the return at 30-40, and the first point after a medical timeout can reveal who is reading the match best. A close preview should focus less on reputation and more on which player owns those repeatable moments.",
-    sources: [{ label: "Tournament schedule placeholder", url: "https://www.atptour.com/" }],
+    sources: [{ label: "ATP Tour", url: "https://www.atptour.com/" }],
     publishedAt: "2026-06-03T10:30:00.000Z",
     author: "Tennis Club Desk",
     tags: ["preview", "pressure", "baseline"]
@@ -73,7 +73,7 @@ export const articles: Article[] = [
       "Start with rhythm, contact, and balance before worrying about speed or spin.",
     body:
       "A reliable serve starts with a motion you can repeat. New players should treat toss height, relaxed shoulders, and a balanced finish as the first checkpoints, then add power once contact becomes predictable.",
-    sources: [{ label: "Coaching resource placeholder", url: "https://www.usta.com/" }],
+    sources: [{ label: "USTA player development", url: "https://www.usta.com/" }],
     publishedAt: "2026-06-02T14:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["serve", "learn", "practice"]
@@ -87,7 +87,7 @@ export const articles: Article[] = [
       "Recent results matter, but matchup fit, travel load, and surface comfort can matter more.",
     body:
       "A three-match winning streak is useful context, not a full prediction. Form is strongest when it lines up with the player's preferred surface, healthy movement, and a draw that rewards their best patterns.",
-    sources: [{ label: "Player profile placeholder", url: "https://www.wtatennis.com/" }],
+    sources: [{ label: "ATP Tour player profiles", url: "https://www.atptour.com/en/players" }],
     publishedAt: "2026-06-01T11:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["form", "players", "analysis"]
@@ -101,7 +101,7 @@ export const articles: Article[] = [
       "A concise look at how early court position and heavy spin help a top clay-court player control rallies.",
     body:
       "On clay, patience matters as much as pace. The best rhythm players build pressure with repeatable patterns, forcing opponents to defend wider with each exchange.",
-    sources: [{ label: "WTA profile placeholder", url: "https://www.wtatennis.com/" }],
+    sources: [{ label: "WTA player profiles", url: "https://www.wtatennis.com/players" }],
     publishedAt: "2026-06-01T09:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["wta", "clay", "players"]
@@ -115,7 +115,7 @@ export const articles: Article[] = [
       "Five original, high-level angles for following a major tournament without getting lost in the draw.",
     body:
       "A major rewards different kinds of durability: physical recovery, mental reset after long sets, and tactical flexibility when matchups change round by round.",
-    sources: [{ label: "Tournament homepage placeholder", url: "https://www.rolandgarros.com/" }],
+    sources: [{ label: "Roland-Garros official site", url: "https://www.rolandgarros.com/" }],
     publishedAt: "2026-05-31T12:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["grand-slam", "storylines", "preview"]
@@ -129,7 +129,7 @@ export const articles: Article[] = [
       "A practical beginner guide to choosing a racket by comfort, control, and consistency before specs.",
     body:
       "New players should start with comfort and repeatable contact. A racket that makes practice feel stable is more useful than one chosen only for power or a favorite player's setup.",
-    sources: [{ label: "Equipment guide placeholder", url: "https://www.usta.com/" }],
+    sources: [{ label: "USTA improvement resources", url: "https://www.usta.com/en/home/improve.html" }],
     publishedAt: "2026-05-30T10:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["gear", "beginner", "racket"]
@@ -143,7 +143,7 @@ export const articles: Article[] = [
       "Learn why break points are the pressure moments that can change a match quickly.",
     body:
       "A break point is a chance for the returner to win a game against serve. It matters because holding serve is usually expected, so converting one can shift the set's momentum.",
-    sources: [{ label: "Rules reference placeholder", url: "https://www.itftennis.com/" }],
+    sources: [{ label: "ITF Rules of Tennis", url: "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" }],
     publishedAt: "2026-05-29T10:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["rules", "beginner", "scoring"]

@@ -34,7 +34,7 @@ export default function RootLayout({
       <body>
         <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
           <SiteHeader />
-          <main>{children}</main>
+          <div>{children}</div>
           <SiteFooter />
         </div>
       </body>

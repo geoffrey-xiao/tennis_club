@@ -40,7 +40,7 @@ export function BriefingSection() {
         <article className="rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
           <h3 className="text-sm font-black uppercase tracking-[0.12em] text-[#0b3124]">Player updates</h3>
           <div className="mt-4 grid gap-4 text-sm">
-            <p><span className="font-black">Jannik Sinner</span><br /><span className="text-[#607068]">Back to No. 1 in the latest mock rankings.</span></p>
+            <p><span className="font-black">Jannik Sinner</span><br /><span className="text-[#607068]">Maintaining a steady rhythm through quick turnarounds.</span></p>
             <p><span className="font-black">Iga Swiatek</span><br /><span className="text-[#607068]">Extends a strong clay-court rhythm.</span></p>
             <p><span className="font-black">Coco Gauff</span><br /><span className="text-[#607068]">Eyes a confident week on return games.</span></p>
           </div>
@@ -48,11 +48,11 @@ export function BriefingSection() {
         <article className="rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">
           <h3 className="text-sm font-black uppercase tracking-[0.12em] text-[#0b3124]">From our sources</h3>
           <div className="mt-4 grid gap-4 text-sm">
-            {["ATP Tour", "WTA Tour", "Tennis TV", "The Tennis Letter"].map((source) => (
-              <p key={source} className="flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-md bg-[#edf2ec] text-xs font-black">{source[0]}</span>
-                <span><span className="font-black">{source}</span><br /><span className="text-[#607068]">Placeholder source</span></span>
-              </p>
+            {[{ label: "ATP Tour", url: "https://www.atptour.com/" }, { label: "WTA Tour", url: "https://www.wtatennis.com/" }, { label: "ITF", url: "https://www.itftennis.com/" }, { label: "Roland-Garros", url: "https://www.rolandgarros.com/" }].map((source) => (
+              <a key={source.label} href={source.url} target="_blank" rel="noreferrer" className="flex items-center gap-3">
+                <span className="grid h-9 w-9 place-items-center rounded-md bg-[#edf2ec] text-xs font-black">{source.label[0]}</span>
+                <span><span className="font-black">{source.label}</span><br /><span className="text-[#607068]">Official source</span></span>
+              </a>
             ))}
           </div>
         </article>

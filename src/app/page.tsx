@@ -15,7 +15,7 @@ export default function Home() {
   const recommendedMatches = matches.slice(0, 3);
 
   return (
-    <>
+    <main>
       <HomeHero />
       <BriefingSection />
       <MatchesSection matches={recommendedMatches} />
@@ -23,6 +23,6 @@ export default function Home() {
       <PlayersSection players={featuredPlayers} />
       <BeginnerGuidesSection guides={beginnerGuides} />
       <NewsletterCta />
-    </>
+    </main>
   );
 }

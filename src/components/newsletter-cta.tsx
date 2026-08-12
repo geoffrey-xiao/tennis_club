@@ -18,21 +18,14 @@ export function NewsletterCta() {
             News, match picks, player updates and guides delivered every morning.
           </p>
         </div>
-        <form className="grid gap-3 sm:grid-cols-[1fr_auto]">
-          <label className="sr-only" htmlFor="newsletter-email">Email address</label>
-          <input
-            id="newsletter-email"
-            type="email"
-            placeholder="Enter your email address"
-            className="min-h-12 rounded-md border border-white/20 bg-white px-4 text-sm text-[#10241d] outline-none"
-          />
+        <div className="flex md:justify-end">
           <Link
             href="/subscribe"
             className="accent-link-text inline-flex min-h-12 items-center justify-center rounded-md bg-[#f4f100] px-5 text-sm font-black"
           >
             Get Daily Updates ›
           </Link>
-        </form>
+        </div>
       </div>
     </section>
   );
