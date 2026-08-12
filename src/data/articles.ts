@@ -42,9 +42,9 @@ export const articles: Article[] = [
     title: "Tennis Scoring 101",
     category: "Beginner",
     summary:
-      "A plain-language look at how players adjust footwork, serve placement, and shot height when tournaments move between surfaces.",
+      "A plain-language guide to points, games, sets, deuce, advantage, and winning a match.",
     body:
-      "Surface changes affect timing before they affect tactics. Players who can reset their movement patterns quickly often look calmer in the first two rounds, especially when their serve gives them free points while the rest of the game catches up.",
+      "Tennis points progress from love to 15, 30, and 40. At 40-40 the score is deuce, and a player generally needs two consecutive points to win the game. Games build a set, and sets decide the match.",
     sources: [{ label: "Official tennis rules reference", url: "https://www.itftennis.com/" }],
     publishedAt: "2026-06-03T08:00:00.000Z",
     author: "Tennis Club Desk",
@@ -147,6 +147,54 @@ export const articles: Article[] = [
     publishedAt: "2026-05-29T10:00:00.000Z",
     author: "Tennis Club Desk",
     tags: ["rules", "beginner", "scoring"]
+  },
+  {
+    id: "article-tennis-rules",
+    slug: "tennis-rules-for-beginners",
+    title: "Tennis Rules for Beginners",
+    category: "Beginner",
+    summary: "The essential rules for serving, changing ends, calling lines, and winning points.",
+    body: "A point begins with a legal serve into the diagonal service box. The ball may bounce once before it is returned, and a shot landing on a line is in. Players change ends at designated game intervals so conditions are shared fairly.",
+    sources: [{ label: "ITF Rules of Tennis", url: "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" }],
+    publishedAt: "2026-05-28T10:00:00.000Z",
+    author: "Tennis Club Desk",
+    tags: ["rules", "beginner", "essentials"]
+  },
+  {
+    id: "article-tiebreak-guide",
+    slug: "what-is-a-tiebreak",
+    title: "What Is a Tiebreak?",
+    category: "Beginner",
+    summary: "Understand tiebreak scoring, serving order, and why every mini-break matters.",
+    body: "A standard tiebreak is usually played first to seven points with a two-point margin. The first player serves once, then service alternates every two points. Winning a point on the opponent's serve is often called a mini-break.",
+    sources: [{ label: "ITF Rules of Tennis", url: "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" }],
+    publishedAt: "2026-05-27T10:00:00.000Z",
+    author: "Tennis Club Desk",
+    tags: ["rules", "beginner", "tiebreak"]
+  },
+  {
+    id: "article-forehand-guide",
+    slug: "basic-forehand-guide",
+    title: "Basic Forehand Guide",
+    category: "Beginner",
+    summary: "Build a repeatable forehand using preparation, spacing, contact, and a balanced finish.",
+    body: "Turn your shoulders as the ball travels toward you, create enough space to swing freely, and meet the ball in front of your body. Finish balanced before adding more racket speed.",
+    sources: [{ label: "USTA player development resources", url: "https://www.usta.com/en/home/improve.html" }],
+    publishedAt: "2026-05-26T10:00:00.000Z",
+    author: "Tennis Club Desk",
+    tags: ["forehand", "beginner", "practice"]
+  },
+  {
+    id: "article-backhand-guide",
+    slug: "basic-backhand-guide",
+    title: "Basic Backhand Guide",
+    category: "Beginner",
+    summary: "Learn the preparation and contact checkpoints shared by reliable backhands.",
+    body: "Prepare early, keep your contact comfortably in front, and use your legs to support the swing. Whether you use one hand or two, a stable head and balanced finish make timing easier to repeat.",
+    sources: [{ label: "USTA player development resources", url: "https://www.usta.com/en/home/improve.html" }],
+    publishedAt: "2026-05-25T10:00:00.000Z",
+    author: "Tennis Club Desk",
+    tags: ["backhand", "beginner", "practice"]
   }
 ];
 
