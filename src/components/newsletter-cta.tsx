@@ -12,10 +12,10 @@ export function NewsletterCta() {
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d7f05c]">Newsletter</p>
           <h2 className="mt-2 text-3xl font-black tracking-normal sm:text-4xl">
-            Get Your Daily Tennis Briefing
+            Preview the Daily Tennis Briefing
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-white/78 sm:text-base">
-            News, match picks, player updates and guides delivered every morning.
+            See how the newsletter signup will work before email delivery is connected.
           </p>
         </div>
         <div className="flex md:justify-end">
@@ -23,7 +23,7 @@ export function NewsletterCta() {
             href="/subscribe"
             className="accent-link-text inline-flex min-h-12 items-center justify-center rounded-md bg-[#f4f100] px-5 text-sm font-black"
           >
-            Get Daily Updates ›
+            Preview signup ›
           </Link>
         </div>
       </div>

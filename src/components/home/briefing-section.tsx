@@ -3,10 +3,15 @@ import { SectionHeading } from "@/components/section-heading";
 import { todaysBriefing } from "@/data/briefing";
 
 export function BriefingSection() {
+  const editionDate = new Intl.DateTimeFormat("en", {
+    dateStyle: "medium",
+    timeZone: "UTC"
+  }).format(new Date(todaysBriefing.publishedAt));
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="mb-5 flex items-center justify-between gap-4">
-        <SectionHeading eyebrow="Today" title="Today's Tennis Briefing" description={todaysBriefing.summary} />
+        <SectionHeading eyebrow="Latest edition" title="Tennis Briefing" description={todaysBriefing.summary} />
         <Link href="/briefing" className="hidden text-sm font-black text-[#0b3124] sm:block">
           View all ›
         </Link>
@@ -21,7 +26,7 @@ export function BriefingSection() {
           <div className="p-4">
             <h2 className="text-xl font-black tracking-normal">{todaysBriefing.headline}</h2>
             <p className="mt-2 text-sm leading-6 text-[#607068]">{todaysBriefing.items[0].text}</p>
-            <p className="mt-4 text-xs font-bold text-[#7b8981]">Roland Garros · 2 min read</p>
+            <p className="mt-4 text-xs font-bold text-[#7b8981]">{editionDate} · 2 min read</p>
           </div>
         </article>
         <article className="rounded-lg border border-[#dfe6dc] bg-white p-5 shadow-[0_12px_30px_rgba(21,38,30,0.08)]">

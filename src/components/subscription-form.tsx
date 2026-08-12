@@ -21,7 +21,8 @@ export function SubscriptionForm({ players }: { players: Player[] }) {
         body: JSON.stringify({
           email: data.get("email"),
           favoritePlayer: data.get("favoritePlayer") || undefined,
-          consent: data.get("consent") === "on"
+          consent: data.get("consent") === "on",
+          website: data.get("website")
         })
       });
       const result = (await response.json()) as { message: string };
@@ -36,6 +37,10 @@ export function SubscriptionForm({ players }: { players: Player[] }) {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 rounded-xl border border-[#dfe6dc] bg-white p-6 shadow-[0_14px_36px_rgba(21,38,30,0.08)] sm:p-8">
+      <div className="absolute -left-[10000px] h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       <div>
         <label htmlFor="email" className="text-sm font-black">Email address</label>
         <input id="email" name="email" type="email" autoComplete="email" required placeholder="you@example.com" className="mt-2 min-h-12 w-full rounded-md border border-[#bdcbbc] px-4 outline-none focus:border-[var(--primary)] focus:ring-2 focus:ring-[#1f6f43]/20" />
@@ -54,7 +59,7 @@ export function SubscriptionForm({ players }: { players: Player[] }) {
       <button type="submit" disabled={status === "loading"} className="primary-link-text min-h-12 rounded-md bg-[#0b3124] px-5 text-sm font-black disabled:opacity-60">
         {status === "loading" ? "Subscribing…" : "Subscribe to the briefing"}
       </button>
-      {message ? <p role="status" className={`rounded-md p-3 text-sm font-bold ${status === "success" ? "bg-[#e1f4d8] text-[#285027]" : "bg-[#fee7e2] text-[#7d2d21]"}`}>{message}</p> : null}
+      {message ? <p role={status === "error" ? "alert" : "status"} className={`rounded-md p-3 text-sm font-bold ${status === "success" ? "bg-[#e1f4d8] text-[#285027]" : "bg-[#fee7e2] text-[#7d2d21]"}`}>{message}</p> : null}
     </form>
   );
 }

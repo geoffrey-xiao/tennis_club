@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/article-card";
 import { articles } from "@/data/articles";
+import { siteName, siteUrl } from "@/lib/site";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -58,9 +59,23 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           candidate.tags.some((tag) => article.tags.includes(tag)))
     )
     .slice(0, 3);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.summary,
+    datePublished: article.publishedAt,
+    author: { "@type": "Organization", name: article.author },
+    publisher: { "@type": "Organization", name: siteName },
+    mainEntityOfPage: new URL(`/news/${article.slug}`, siteUrl).toString()
+  };
 
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <header className="border-b border-[#d9e3d9] bg-[#0b3124] text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
           <Link
